@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anonymous functions</title>
+    </head>
+    <body>
+        <center>
+            <blink><h1>Anonymous functions</h1></blink>
+            <br /><br />
+            <script>
+                var varUPosebnomScriptTaguPre = "postavljena u posebnom script tagu pre";
+            </script>
+            <script src="jsPre.js"></script>
+            <script>
+                
+                function ispisiVidljivost(promenljiva, mestoPromenljive='') {
+                    if ((promenljiva) == 'undefined') {
+                        document.write("Varijabla postavljena <b style='color:red'>"+mestoPromenljive+" NIJE</b> vidljiva");
+                    }
+                    else {
+                        document.write("Varijabla postavljena <b style='color:green'>"+mestoPromenljive+" JE</b> vidljiva");
+                    }
+                    document.write("<br /><br />");
+                }
+                
+                var varPreAnonimneFunkcije = "postavljena pre anonimne funkcije";
+                
+                (function() {
+                    var varUnutarFunkcije = "postavljena unutar anonimne funkcije";
+                    
+                    ispisiVidljivost(typeof(varUPosebnomScriptTaguPre),
+                                     "u posebnom script tagu pre anonimne funkcije");
+                    ispisiVidljivost(typeof(varPreAnonimneFunkcije),
+                                     "pre anonimne funkcije");
+                    ispisiVidljivost(typeof(varUnutarFunkcije),
+                                     "unutar anonimne funkcije");
+                    ispisiVidljivost(typeof(varPosleAnonimneFunkcije),
+                                     "posle anonimne funkcije");
+                    ispisiVidljivost(typeof(varUPosebnomScriptTaguPosle),
+                                     "u posebnom script tagu posle anonimne funkcije");
+                    ispisiVidljivost(typeof(jsPre),
+                                     "u posebnom js file-u pre anonimne funkcije");
+                    ispisiVidljivost(typeof(jsPosle),
+                                     "u posebnom js file-u posle anonimne funkcije");
+                    
+                })();
+                
+                var varPosleAnonimneFunkcije = "postavljena posle anonimne funkcije";
+                
+            </script>
+            <script src="jsPosle.js"></script>
+            
+            <script>
+                var varUPosebnomScriptTaguPosle = "postavljena u posebnom script tagu posle";
+            </script>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+var jsPosle = "postavljena posle anonimne funkcije";
